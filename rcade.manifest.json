@@ -1,0 +1,18 @@
+{
+  "$schema": "https://rcade.dev/manifest.schema.json",
+  "name": "lockpick",
+  "display_name": "Lockpicking!",
+  "description": "Realistic locksport simulation!",
+  "visibility": "internal",
+  "authors": [
+    {
+      "display_name": "Andrew S"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "@rcade/input-classic",
+      "version": "1.0.0"
+    }
+  ]
+}
