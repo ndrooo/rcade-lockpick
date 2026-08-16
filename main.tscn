@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Script" uid="uid://mf66bxpxm1ae" path="res://scripts/player.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock.tscn" id="1_ig7tw"]
 
 [node name="Node2D" type="Node" unique_id=422408999]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1727476714]
-position = Vector2(161, 141)
-script = ExtResource("1_0xm2m")
+[node name="Lock" parent="." unique_id=575780063 instance=ExtResource("1_ig7tw")]
+position = Vector2(49, 41)
+
+[node name="Lock2" parent="." unique_id=1287281408 instance=ExtResource("1_ig7tw")]
+position = Vector2(203, 41)
+player = 1

@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cjad7esi5uopw"]
+
+[ext_resource type="Script" uid="uid://bwxlw2e688txi" path="res://pin_stack.gd" id="1_21d20"]
+[ext_resource type="Texture2D" uid="uid://du5a18j4dsss5" path="res://sprites/driver_pin.png" id="1_vhh52"]
+[ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="2_cmwro"]
+[ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_wxmsd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uvtj7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk44l"]
+atlas = ExtResource("1_vhh52")
+region = Rect2(27, 33, 9, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmwro"]
+size = Vector2(9, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t56uw"]
+size = Vector2(9, 11)
+
+[node name="PinStack" type="Node2D" unique_id=424966032]
+script = ExtResource("1_21d20")
+
+[node name="Spring" type="Node2D" parent="." unique_id=1349144139]
+
+[node name="DriverPin" type="RigidBody2D" parent="." unique_id=367938113]
+collision_layer = 3
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_uvtj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="DriverPin" unique_id=315591450]
+position = Vector2(1, 0)
+texture = SubResource("AtlasTexture_wk44l")
+centered = false
+
+[node name="Collider" type="CollisionShape2D" parent="DriverPin" unique_id=2003916430]
+position = Vector2(5.5, 7)
+shape = SubResource("RectangleShape2D_cmwro")
+
+[node name="KeyPin" type="RigidBody2D" parent="." unique_id=2111909380]
+position = Vector2(0, 14)
+collision_layer = 3
+collision_mask = 3
+
+[node name="NinePatchSprite2D" type="Node2D" parent="KeyPin" unique_id=880411034]
+position = Vector2(1, 0)
+script = ExtResource("3_wxmsd")
+texture = ExtResource("2_cmwro")
+size = Vector2(9, 10)
+region_rect = Rect2(0, 0, 9, 7)
+patch_margin_top = 2
+patch_margin_bottom = 4
+axis_stretch_vertical = 1
+centered = false
+metadata/_custom_type_script = "uid://c2j1qdkvd1cjs"
+
+[node name="Collider" type="CollisionShape2D" parent="KeyPin" unique_id=1734378592]
+position = Vector2(5.5, 5.5)
+shape = SubResource("RectangleShape2D_t56uw")

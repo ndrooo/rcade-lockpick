@@ -23,6 +23,7 @@ RCadeInput="*uid://ci44fyk4upc0u"
 
 window/size/viewport_width=320
 window/size/viewport_height=240
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -107,6 +108,7 @@ two_player={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
