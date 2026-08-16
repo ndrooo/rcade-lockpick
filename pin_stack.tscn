@@ -15,6 +15,7 @@ region = Rect2(27, 33, 9, 13)
 size = Vector2(9, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t56uw"]
+resource_local_to_scene = true
 size = Vector2(9, 11)
 
 [node name="PinStack" type="Node2D" unique_id=424966032]
@@ -26,6 +27,8 @@ script = ExtResource("1_21d20")
 collision_layer = 3
 collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_uvtj7")
+can_sleep = false
+lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="DriverPin" unique_id=315591450]
 position = Vector2(1, 0)
@@ -40,6 +43,8 @@ shape = SubResource("RectangleShape2D_cmwro")
 position = Vector2(0, 14)
 collision_layer = 3
 collision_mask = 3
+can_sleep = false
+lock_rotation = true
 
 [node name="NinePatchSprite2D" type="Node2D" parent="KeyPin" unique_id=880411034]
 position = Vector2(1, 0)
