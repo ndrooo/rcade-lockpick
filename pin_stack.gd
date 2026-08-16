@@ -2,7 +2,13 @@ extends Node2D
 
 class_name PinStack
 
+@onready var driver = $DriverPin
+
 @export var binding = false
+@export var pin_set = false:
+	set(is_set):
+		driver.freeze = is_set
+		pin_set = is_set
 @export var key_pin_height = 10:
 	set(new_height):
 		key_pin_height = new_height

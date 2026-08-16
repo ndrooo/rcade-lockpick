@@ -125,14 +125,14 @@ position = Vector2(51, 6)
 shape = SubResource("RectangleShape2D_m63d5")
 debug_color = Color(0.9999997, 0.7608354, 0.32780793, 0.41960785)
 
-[node name="Shear area" type="Area2D" parent="." unique_id=1218419335]
+[node name="ShearArea" type="Area2D" parent="." unique_id=1218419335]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shear area" unique_id=322070690]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShearArea" unique_id=322070690]
 position = Vector2(53.5, 57)
 shape = SubResource("RectangleShape2D_t56uw")
 debug_color = Color(0.99999994, 0.27517554, 0.9731205, 0)
 
-[node name="Line2D" type="Line2D" parent="Shear area" unique_id=464316042]
+[node name="Line2D" type="Line2D" parent="ShearArea" unique_id=464316042]
 position = Vector2(0, 26)
 points = PackedVector2Array(0, 0.5, 107, 0.5)
 width = 1.0

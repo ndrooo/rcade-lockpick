@@ -18,7 +18,16 @@ var right_action = ""
 var a_action = ""
 var b_action = ""
 
+@onready var shear_area: Area2D = $ShearArea
+
 var active_pin = 0
+var binding_order = []
+var bind_index = 0:
+	set(new_index):
+		binding_order[bind_index].binding = false
+		binding_order[new_index].binding = true
+		bind_index = new_index
+var win_state = false
 
 var flip = false
 
@@ -34,9 +43,14 @@ func _ready() -> void:
 	for pin in $Pins.get_children():
 		var pin_stack: PinStack = pin
 		pin_stack.key_pin_height = randi() % 10 + 10
+	binding_order = $Pins.get_children()
+	binding_order.shuffle()
+	bind_index = 0
 
 
 func _process(delta: float) -> void:
+	if win_state:
+		return
 	var pick: CharacterBody2D = $Pick
 	$Pick.velocity = Vector2.ZERO
 	var speed = fast_speed if Input.is_action_pressed(a_action) else normal_speed
@@ -48,9 +62,17 @@ func _process(delta: float) -> void:
 		set_pin(1 if flip else -1)
 	if Input.is_action_just_pressed(right_action):
 		set_pin(-1 if flip else 1)
-	if Input.is_action_just_pressed(b_action):
-		cross_section = !cross_section
-		$Body.visible = !cross_section
+	if not shear_area.overlaps_body(binding_order[bind_index].driver):
+		advance()
+
+func advance():
+	binding_order[bind_index].pin_set = true
+	if bind_index >= 4:
+		$Pick.visible = false
+		$Body.visible = true
+		win_state = true
+	else:
+		bind_index += 1
 
 func set_pin(relative) -> void:
 	var next_pin = active_pin + relative
