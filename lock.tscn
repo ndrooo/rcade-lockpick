@@ -19,6 +19,9 @@ size = Vector2(5, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmqde"]
 size = Vector2(16, 42)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aaqj"]
+size = Vector2(107, 9)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_t56uw"]
 atlas = ExtResource("1_l5ccq")
 region = Rect2(0, 45, 100, 60)
@@ -77,23 +80,28 @@ position = Vector2(99, 21)
 shape = SubResource("RectangleShape2D_rmqde")
 debug_color = Color(1, 1, 1, 0.05882353)
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=1400344262]
+position = Vector2(53.5, -4.5)
+shape = SubResource("RectangleShape2D_6aaqj")
+debug_color = Color(1, 1, 1, 0.05882353)
+
 [node name="Pins" type="Node2D" parent="." unique_id=409930028]
 
 [node name="PinStack" parent="Pins" unique_id=424966032 instance=ExtResource("2_y8v6n")]
-position = Vector2(16, 28)
+position = Vector2(17, 53)
 key_pin_height = 8
 
 [node name="PinStack2" parent="Pins" unique_id=1196165361 instance=ExtResource("2_y8v6n")]
-position = Vector2(32, 28)
+position = Vector2(33, 53)
 
 [node name="PinStack3" parent="Pins" unique_id=1235819778 instance=ExtResource("2_y8v6n")]
-position = Vector2(48, 28)
+position = Vector2(49, 53)
 
 [node name="PinStack4" parent="Pins" unique_id=1576003560 instance=ExtResource("2_y8v6n")]
-position = Vector2(64, 28)
+position = Vector2(65, 53)
 
 [node name="PinStack5" parent="Pins" unique_id=2116540305 instance=ExtResource("2_y8v6n")]
-position = Vector2(80, 28)
+position = Vector2(81, 53)
 
 [node name="Pick" type="CharacterBody2D" parent="." unique_id=708463670]
 

@@ -9,3 +9,5 @@ class_name PinStack
 		$KeyPin/NinePatchSprite2D.size.y = key_pin_height
 		$KeyPin/Collider.shape.size.y = key_pin_height + 1
 		$KeyPin/Collider.position.y = key_pin_height / 2.0
+		$KeyPin.position.y = -key_pin_height - 1
+		$DriverPin.position.y = -key_pin_height - 15
