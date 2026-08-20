@@ -2,6 +2,7 @@ extends Node2D
 
 class_name PinStack
 
+@onready var key = $KeyPin
 @onready var driver = $DriverPin
 
 @export var binding = false
@@ -17,3 +18,6 @@ class_name PinStack
 		$KeyPin/Collider.position.y = key_pin_height / 2.0
 		$KeyPin.position.y = -key_pin_height - 1
 		$DriverPin.position.y = -key_pin_height - 15
+
+@export var pick: CharacterBody2D = null
+

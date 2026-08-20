@@ -19,15 +19,15 @@ size = Vector2(5, 42)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmqde"]
 size = Vector2(16, 42)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aaqj"]
-size = Vector2(107, 9)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_t56uw"]
 atlas = ExtResource("1_l5ccq")
 region = Rect2(0, 45, 100, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu4bt"]
 size = Vector2(9, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmr40"]
+size = Vector2(12, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m63d5"]
 size = Vector2(102, 12)
@@ -80,12 +80,8 @@ position = Vector2(99, 21)
 shape = SubResource("RectangleShape2D_rmqde")
 debug_color = Color(1, 1, 1, 0.05882353)
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=1400344262]
-position = Vector2(53.5, -4.5)
-shape = SubResource("RectangleShape2D_6aaqj")
-debug_color = Color(1, 1, 1, 0.05882353)
-
 [node name="Pins" type="Node2D" parent="." unique_id=409930028]
+position = Vector2(0, -2)
 
 [node name="PinStack" parent="Pins" unique_id=424966032 instance=ExtResource("2_y8v6n")]
 position = Vector2(17, 53)
@@ -104,6 +100,8 @@ position = Vector2(65, 53)
 position = Vector2(81, 53)
 
 [node name="Pick" type="CharacterBody2D" parent="." unique_id=708463670]
+position = Vector2(0, 4)
+collision_layer = 0
 
 [node name="Sprite" type="Sprite2D" parent="Pick" unique_id=1060524813]
 texture = SubResource("AtlasTexture_t56uw")
@@ -115,8 +113,22 @@ position = Vector2(21.5, 66)
 shape = SubResource("RectangleShape2D_fu4bt")
 debug_color = Color(0.7743461, 0.14686689, 1, 0.41960785)
 
+[node name="LeftClearance" type="Area2D" parent="Pick" unique_id=1562436933]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pick/LeftClearance" unique_id=1258511713]
+position = Vector2(10, 66)
+shape = SubResource("RectangleShape2D_wmr40")
+debug_color = Color(0.8980392, 0.6039216, 1, 0.21960784)
+
+[node name="RightClearance" type="Area2D" parent="Pick" unique_id=566500994]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pick/RightClearance" unique_id=693002626]
+position = Vector2(33, 66)
+shape = SubResource("RectangleShape2D_wmr40")
+debug_color = Color(0.8509804, 0.5137255, 1, 0.21176471)
+
 [node name="Keyway block" type="StaticBody2D" parent="." unique_id=1054860352]
-position = Vector2(0, 53)
+position = Vector2(0, 51)
 collision_layer = 2
 collision_mask = 2
 
