@@ -66,12 +66,8 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed(right_action):
 		pick.velocity += Vector2.RIGHT * x_speed
 	pick.move_and_slide()
-	if not shear_area.overlaps_body(binding_order[bind_index].driver):
-		advance()
-	for i in pick.get_slide_collision_count():
-		var collision = pick.get_slide_collision(i)
-		if collision.get_collider() is RigidBody2D and pick.is_on_ceiling_only():
-			collision.get_collider().apply_central_impulse(-collision.get_normal() * 40.0)
+	# if not shear_area.overlaps_area(binding_order[bind_index].driver):
+	# 	advance()
 
 func advance():
 	binding_order[bind_index].pin_set = true

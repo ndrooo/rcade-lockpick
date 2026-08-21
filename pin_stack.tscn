@@ -5,44 +5,42 @@
 [ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="2_cmwro"]
 [ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_wxmsd"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uvtj7"]
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk44l"]
 atlas = ExtResource("1_vhh52")
 region = Rect2(27, 33, 9, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmwro"]
-size = Vector2(11, 14)
+size = Vector2(9, 14)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t56uw"]
 resource_local_to_scene = true
-size = Vector2(11, 11)
+size = Vector2(9, 11)
 
 [node name="PinStack" type="Node2D" unique_id=424966032]
 script = ExtResource("1_21d20")
 
 [node name="Spring" type="Node2D" parent="." unique_id=1349144139]
 
-[node name="DriverPin" type="RigidBody2D" parent="." unique_id=907858187]
-position = Vector2(0, -25)
-collision_layer = 3
-collision_mask = 3
-physics_material_override = SubResource("PhysicsMaterial_uvtj7")
+[node name="DriverPin" type="Area2D" parent="." unique_id=696409207]
+position = Vector2(0, -11)
+collision_layer = 0
+collision_mask = 0
 
 [node name="Sprite2D" type="Sprite2D" parent="DriverPin" unique_id=315591450]
+position = Vector2(0, -14)
 texture = SubResource("AtlasTexture_wk44l")
 centered = false
 
 [node name="Collider" type="CollisionShape2D" parent="DriverPin" unique_id=2003916430]
-position = Vector2(4.5, 7)
+position = Vector2(4.5, -7)
 shape = SubResource("RectangleShape2D_cmwro")
 
-[node name="KeyPin" type="RigidBody2D" parent="." unique_id=1644691603]
-position = Vector2(0, -11)
+[node name="KeyPin" type="Area2D" parent="." unique_id=918707881]
 collision_layer = 3
 collision_mask = 3
 
 [node name="NinePatchSprite2D" type="Node2D" parent="KeyPin" unique_id=880411034]
+position = Vector2(0, -11)
 script = ExtResource("3_wxmsd")
 texture = ExtResource("2_cmwro")
 size = Vector2(9, 10)
@@ -54,5 +52,5 @@ centered = false
 metadata/_custom_type_script = "uid://c2j1qdkvd1cjs"
 
 [node name="Collider" type="CollisionShape2D" parent="KeyPin" unique_id=1734378592]
-position = Vector2(4.5, 5.5)
+position = Vector2(4.5, -5.5)
 shape = SubResource("RectangleShape2D_t56uw")
