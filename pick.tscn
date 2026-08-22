@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4rurneouvr7b"]
 
 [ext_resource type="Texture2D" uid="uid://dhsslimsg7mmq" path="res://sprites/pick.png" id="1_egge6"]
+[ext_resource type="Script" uid="uid://bnmk5k38j6gdp" path="res://pick.gd" id="1_qch5m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t56uw"]
 atlas = ExtResource("1_egge6")
@@ -11,6 +12,7 @@ size = Vector2(8, 26)
 
 [node name="Pick" type="CharacterBody2D" unique_id=1340085665]
 collision_layer = 0
+script = ExtResource("1_qch5m")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=997395451]
 position = Vector2(-17, -53)

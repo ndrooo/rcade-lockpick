@@ -5,8 +5,8 @@
 [node name="Node2D" type="Node" unique_id=422408999]
 
 [node name="Lock" parent="." unique_id=575780063 instance=ExtResource("1_ig7tw")]
-position = Vector2(49, 41)
+position = Vector2(44, 43)
 
-[node name="Lock2" parent="." unique_id=1287281408 instance=ExtResource("1_ig7tw")]
-position = Vector2(203, 41)
+[node name="Lock2" parent="." unique_id=1171740846 instance=ExtResource("1_ig7tw")]
+position = Vector2(176, 43)
 player = 1
