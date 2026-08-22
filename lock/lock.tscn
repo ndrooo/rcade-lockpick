@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bihlgp3weco85"]
 
-[ext_resource type="Script" uid="uid://uvrdirtadgfv" path="res://lock.gd" id="1_uvtj7"]
+[ext_resource type="Script" uid="uid://uvrdirtadgfv" path="res://lock/lock.gd" id="1_uvtj7"]
 [ext_resource type="Texture2D" uid="uid://s00srsfwycyo" path="res://sprites/bg.png" id="1_x87c7"]
-[ext_resource type="PackedScene" uid="uid://cjad7esi5uopw" path="res://pin_stack.tscn" id="2_y8v6n"]
-[ext_resource type="PackedScene" uid="uid://4rurneouvr7b" path="res://pick.tscn" id="4_rmqde"]
+[ext_resource type="PackedScene" uid="uid://cjad7esi5uopw" path="res://lock/pin_stack.tscn" id="2_y8v6n"]
+[ext_resource type="PackedScene" uid="uid://4rurneouvr7b" path="res://lock/pick.tscn" id="4_rmqde"]
 [ext_resource type="Texture2D" uid="uid://m5aj6pugv464" path="res://sprites/body.png" id="5_rmqde"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fu4bt"]

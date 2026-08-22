@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjad7esi5uopw"]
 
-[ext_resource type="Script" uid="uid://bwxlw2e688txi" path="res://pin_stack.gd" id="1_21d20"]
+[ext_resource type="Script" uid="uid://bwxlw2e688txi" path="res://lock/pin_stack.gd" id="1_21d20"]
 [ext_resource type="Texture2D" uid="uid://du5a18j4dsss5" path="res://sprites/driver_pin.png" id="1_vhh52"]
 [ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="2_cmwro"]
 [ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_wxmsd"]

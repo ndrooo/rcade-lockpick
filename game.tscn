@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://o6fkw0nce3xw" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock/lock.tscn" id="2_feb5d"]
+
+[node name="Game" type="Node2D" unique_id=1400810246]
+script = ExtResource("1_e2o6t")
+
+[node name="Lock" parent="." unique_id=575780063 instance=ExtResource("2_feb5d")]
+position = Vector2(44, 43)
+
+[node name="Lock2" parent="." unique_id=1171740846 instance=ExtResource("2_feb5d")]
+position = Vector2(176, 43)
+player = 1
