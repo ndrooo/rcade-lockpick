@@ -2,13 +2,55 @@
 
 [ext_resource type="Script" uid="uid://o6fkw0nce3xw" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock/lock.tscn" id="2_feb5d"]
+[ext_resource type="Script" uid="uid://dvqpohquqsvdb" path="res://player.gd" id="3_feb5d"]
+
+[sub_resource type="Resource" id="Resource_feb5d"]
+script = ExtResource("3_feb5d")
+player_name = "Player one"
+action_prefix = "p1"
+metadata/_custom_type_script = "uid://dvqpohquqsvdb"
+
+[sub_resource type="Resource" id="Resource_fc0e3"]
+script = ExtResource("3_feb5d")
+player_name = "Player two"
+action_prefix = "p2"
+metadata/_custom_type_script = "uid://dvqpohquqsvdb"
 
 [node name="Game" type="Node2D" unique_id=1400810246]
 script = ExtResource("1_e2o6t")
+p1 = SubResource("Resource_feb5d")
+p2 = SubResource("Resource_fc0e3")
 
-[node name="Lock" parent="." unique_id=575780063 instance=ExtResource("2_feb5d")]
+[node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
 position = Vector2(44, 43)
 
-[node name="Lock2" parent="." unique_id=1171740846 instance=ExtResource("2_feb5d")]
+[node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
+
+[node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
 position = Vector2(176, 43)
-player = 1
+
+[node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
+
+[node name="TimeElapsed" type="Label" parent="." unique_id=297491854]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 140.0
+offset_top = 11.0
+offset_right = 180.0
+offset_bottom = 34.0
+grow_horizontal = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="WinLabel" type="Label" parent="." unique_id=1899310942]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 141.0
+offset_top = 159.0
+offset_right = 181.0
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 0

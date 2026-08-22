@@ -1,6 +1,5 @@
-extends CharacterBody2D
-
 class_name Pick
+extends CharacterBody2D
 
 @export var y_speed = 24.0
 @export var x_speed = 30.0
@@ -11,11 +10,11 @@ var down_action = ""
 var left_action = ""
 var right_action = ""
 
-func set_player(player: Types.Player) -> void:
-	up_action = "p1_up" if player == Types.Player.ONE else "p2_up"
-	down_action = "p1_down" if player == Types.Player.ONE else "p2_down"
-	left_action = "p1_left" if player == Types.Player.ONE else "p2_left"
-	right_action = "p1_right" if player == Types.Player.ONE else "p2_right"
+func set_player(player: Player) -> void:
+	up_action = player.up_action
+	down_action = player.down_action
+	left_action = player.left_action
+	right_action = player.right_action
 
 func _physics_process(_delta: float) -> void:
 	if not enabled:

@@ -1,6 +1,5 @@
-extends Node2D
-
 class_name PinStack
+extends Node2D
 
 @onready var key: Area2D = $KeyPin
 @onready var driver: Area2D = $DriverPin
