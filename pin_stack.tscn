@@ -10,11 +10,17 @@ atlas = ExtResource("1_vhh52")
 region = Rect2(27, 33, 9, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmwro"]
-size = Vector2(9, 14)
+size = Vector2(7, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fu4bt"]
+size = Vector2(9, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t56uw"]
 resource_local_to_scene = true
-size = Vector2(9, 11)
+size = Vector2(7, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21d20"]
+size = Vector2(9, 9)
 
 [node name="PinStack" type="Node2D" unique_id=424966032]
 script = ExtResource("1_21d20")
@@ -35,6 +41,13 @@ centered = false
 position = Vector2(4.5, -7)
 shape = SubResource("RectangleShape2D_cmwro")
 
+[node name="Block" type="StaticBody2D" parent="DriverPin" unique_id=741767016]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DriverPin/Block" unique_id=1761085367]
+position = Vector2(4.5, -7.5)
+shape = SubResource("RectangleShape2D_fu4bt")
+debug_color = Color(0.972549, 0, 0.4392157, 0.09411765)
+
 [node name="KeyPin" type="Area2D" parent="." unique_id=918707881]
 collision_layer = 3
 collision_mask = 3
@@ -54,3 +67,11 @@ metadata/_custom_type_script = "uid://c2j1qdkvd1cjs"
 [node name="Collider" type="CollisionShape2D" parent="KeyPin" unique_id=1734378592]
 position = Vector2(4.5, -5.5)
 shape = SubResource("RectangleShape2D_t56uw")
+
+[node name="Block" type="StaticBody2D" parent="KeyPin" unique_id=241760828]
+position = Vector2(0, -11)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPin/Block" unique_id=856942917]
+position = Vector2(4.5, 3.5)
+shape = SubResource("RectangleShape2D_21d20")
+debug_color = Color(0.972549, 0, 0.4392157, 0.09411765)

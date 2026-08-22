@@ -24,7 +24,7 @@ var b_action = ""
 @onready var pick: CharacterBody2D = $Pick
 
 var active_pin = 0
-var binding_order = []
+var binding_order: Array[PinStack] = []
 var bind_index = 0:
 	set(new_index):
 		binding_order[bind_index].binding = false
@@ -47,9 +47,10 @@ func _ready() -> void:
 		var pin_stack: PinStack = pin
 		pin.pick = pick
 		pin_stack.key_pin_height = randi() % 10 + 10
-	binding_order = $Pins.get_children()
+	binding_order.assign($Pins.get_children())
 	binding_order.shuffle()
 	bind_index = 0
+	binding_order[bind_index].set_pin.connect(advance)
 
 
 func _physics_process(_delta: float) -> void:
@@ -66,14 +67,14 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed(right_action):
 		pick.velocity += Vector2.RIGHT * x_speed
 	pick.move_and_slide()
-	# if not shear_area.overlaps_area(binding_order[bind_index].driver):
-	# 	advance()
 
 func advance():
-	binding_order[bind_index].pin_set = true
+	binding_order[bind_index].set_pin.disconnect(advance)
 	if bind_index >= 4:
 		$Pick.visible = false
 		$Body.visible = true
 		win_state = true
 	else:
 		bind_index += 1
+		binding_order[bind_index].bind_pins()
+		binding_order[bind_index].set_pin.connect(advance)

@@ -88,6 +88,7 @@ position = Vector2(81, 53)
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
 position = Vector2(2, 52)
+collision_layer = 1
 
 [node name="ShearArea" type="Area2D" parent="." unique_id=1218419335]
 

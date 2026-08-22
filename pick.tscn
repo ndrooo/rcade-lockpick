@@ -7,7 +7,7 @@ atlas = ExtResource("1_egge6")
 region = Rect2(0, 45, 100, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu4bt"]
-size = Vector2(9, 26)
+size = Vector2(8, 26)
 
 [node name="Pick" type="CharacterBody2D" unique_id=1340085665]
 collision_layer = 0
@@ -19,6 +19,6 @@ centered = false
 offset = Vector2(-74, 52)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629727395]
-position = Vector2(4.5, 13)
+position = Vector2(5, 13)
 shape = SubResource("RectangleShape2D_fu4bt")
 debug_color = Color(0.7743461, 0.14686689, 1, 0.41960785)
