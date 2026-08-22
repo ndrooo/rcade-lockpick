@@ -11,13 +11,25 @@ atlas = ExtResource("1_x87c7")
 region = Rect2(10, 20, 107, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtk48"]
-size = Vector2(16, 42)
+size = Vector2(24, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvtj7"]
 size = Vector2(5, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmqde"]
 size = Vector2(16, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6aaqj"]
+size = Vector2(5, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebkbn"]
+size = Vector2(110, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4h6p"]
+size = Vector2(4, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p554e"]
+size = Vector2(115, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t56uw"]
 size = Vector2(107, 62)
@@ -38,7 +50,7 @@ centered = false
 [node name="StaticBody2D" type="StaticBody2D" parent="Cross-section" unique_id=247746355]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=2029095958]
-position = Vector2(8, 21)
+position = Vector2(4, 21)
 shape = SubResource("RectangleShape2D_qtk48")
 debug_color = Color(1, 1, 1, 0.05882353)
 
@@ -67,6 +79,26 @@ position = Vector2(99, 21)
 shape = SubResource("RectangleShape2D_rmqde")
 debug_color = Color(1, 1, 1, 0.05882353)
 
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=4075515]
+position = Vector2(104.5, 65)
+shape = SubResource("RectangleShape2D_6aaqj")
+debug_color = Color(1, 1, 1, 0.05882353)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=1259403742]
+position = Vector2(47, 85.5)
+shape = SubResource("RectangleShape2D_ebkbn")
+debug_color = Color(1, 1, 1, 0.05882353)
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=1761998013]
+position = Vector2(-6, 62.5)
+shape = SubResource("RectangleShape2D_d4h6p")
+debug_color = Color(1, 1, 1, 0.05882353)
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=347551499]
+position = Vector2(49.5, 24.5)
+shape = SubResource("RectangleShape2D_p554e")
+debug_color = Color(1, 1, 1, 0.05882353)
+
 [node name="Pins" type="Node2D" parent="." unique_id=409930028]
 position = Vector2(0, -2)
 
@@ -87,7 +119,7 @@ position = Vector2(65, 53)
 position = Vector2(81, 53)
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
-position = Vector2(2, 52)
+position = Vector2(24, 54)
 collision_layer = 1
 
 [node name="ShearArea" type="Area2D" parent="." unique_id=1218419335]
