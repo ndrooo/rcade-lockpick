@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cjad7esi5uopw"]
 
-[ext_resource type="Script" uid="uid://bwxlw2e688txi" path="res://lock/pin_stack.gd" id="1_21d20"]
-[ext_resource type="Texture2D" uid="uid://du5a18j4dsss5" path="res://sprites/driver_pin.png" id="1_vhh52"]
-[ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="2_cmwro"]
-[ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_wxmsd"]
+[ext_resource type="Script" uid="uid://bwxlw2e688txi" path="res://lock/pin_stack.gd" id="1_pbnht"]
+[ext_resource type="Texture2D" uid="uid://du5a18j4dsss5" path="res://sprites/driver_pin.png" id="2_y4xag"]
+[ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_v7huv"]
+[ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="4_m4u8h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk44l"]
-atlas = ExtResource("1_vhh52")
+atlas = ExtResource("2_y4xag")
 region = Rect2(27, 33, 9, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmwro"]
@@ -23,7 +23,7 @@ size = Vector2(7, 11)
 size = Vector2(9, 9)
 
 [node name="PinStack" type="Node2D" unique_id=424966032]
-script = ExtResource("1_21d20")
+script = ExtResource("1_pbnht")
 
 [node name="Spring" type="Node2D" parent="." unique_id=1349144139]
 
@@ -54,8 +54,8 @@ collision_mask = 3
 
 [node name="NinePatchSprite2D" type="Node2D" parent="KeyPin" unique_id=880411034]
 position = Vector2(0, -11)
-script = ExtResource("3_wxmsd")
-texture = ExtResource("2_cmwro")
+script = ExtResource("3_v7huv")
+texture = ExtResource("4_m4u8h")
 size = Vector2(9, 10)
 region_rect = Rect2(0, 0, 9, 7)
 patch_margin_top = 2
@@ -75,3 +75,6 @@ position = Vector2(0, -11)
 position = Vector2(4.5, 3.5)
 shape = SubResource("RectangleShape2D_21d20")
 debug_color = Color(0.972549, 0, 0.4392157, 0.09411765)
+
+[connection signal="body_entered" from="KeyPin" to="." method="_on_key_pin_body_entered"]
+[connection signal="body_exited" from="KeyPin" to="." method="_on_key_pin_body_exited"]

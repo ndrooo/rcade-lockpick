@@ -16,10 +16,10 @@ func _ready() -> void:
 	p1.locks_remaining -= 1
 	p2.locks_remaining -= 1
 	# TODO: run a countdown
-	p1.lock.enable(p1)
 	p1.lock.picked.connect(lock_picked.bind(p1))
-	p2.lock.enable(p2)
 	p2.lock.picked.connect(lock_picked.bind(p2))
+	p1.lock.enable(p1)
+	p2.lock.enable(p2)
 
 func _process(delta: float) -> void:
 	if stopwatch_running:

@@ -39,3 +39,11 @@ func _physics_process(delta: float) -> void:
 
 func bind_pins():
 	binding = true
+
+func _on_key_pin_body_entered(body: Node2D) -> void:
+	if body is Pick:
+		body.touching_pin_stacks[self] = true
+
+func _on_key_pin_body_exited(body: Node2D) -> void:
+	if body is Pick:
+		body.touching_pin_stacks[self] = false
