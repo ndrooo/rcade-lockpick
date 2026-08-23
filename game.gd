@@ -24,7 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if stopwatch_running:
 		elapsed += delta
-		$TimeElapsed.text = "%0.2f" % elapsed
+		$GameUI/TimeElapsed.text = "%0.2f" % elapsed
 
 func lock_picked(player: Player) -> void:
 	# TODO: update the ui with timestamp
@@ -44,4 +44,4 @@ func trigger_win(player: Player) -> void:
 	stopwatch_running = false
 	p1.lock.disable()
 	p2.lock.disable()
-	$WinLabel.text = "%s wins!" % player.player_name
+	$GameUI/WinLabel.text = "%s wins!" % player.player_name

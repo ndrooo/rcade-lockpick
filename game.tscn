@@ -31,26 +31,28 @@ position = Vector2(176, 43)
 
 [node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
 
-[node name="TimeElapsed" type="Label" parent="." unique_id=297491854]
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=292398793]
+
+[node name="TimeElapsed" type="Label" parent="GameUI" unique_id=297491854]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 140.0
+offset_left = -20.0
 offset_top = 11.0
-offset_right = 180.0
+offset_right = 20.0
 offset_bottom = 34.0
 grow_horizontal = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="WinLabel" type="Label" parent="." unique_id=1899310942]
+[node name="WinLabel" type="Label" parent="GameUI" unique_id=1899310942]
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 141.0
-offset_top = 159.0
-offset_right = 181.0
-offset_bottom = 182.0
+offset_left = -19.0
+offset_top = -81.0
+offset_right = 21.0
+offset_bottom = -58.0
 grow_horizontal = 2
 grow_vertical = 0
