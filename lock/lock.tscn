@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cjad7esi5uopw" path="res://lock/pin_stack.tscn" id="2_y8v6n"]
 [ext_resource type="PackedScene" uid="uid://4rurneouvr7b" path="res://lock/pick.tscn" id="4_rmqde"]
 [ext_resource type="Texture2D" uid="uid://m5aj6pugv464" path="res://sprites/body.png" id="5_rmqde"]
+[ext_resource type="Texture2D" uid="uid://blaop02kdhene" path="res://sprites/front.png" id="6_0k4hf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fu4bt"]
 atlas = ExtResource("1_x87c7")
@@ -34,6 +35,112 @@ size = Vector2(115, 5)
 [sub_resource type="AtlasTexture" id="AtlasTexture_uvtj7"]
 atlas = ExtResource("5_rmqde")
 region = Rect2(4, 16, 113, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ruir"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tv5c"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppfbi"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igs4s"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlfnv"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rrup"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dc7i0"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fyp3k"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(192, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clxru"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsnn7"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(64, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nv5sk"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(128, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e2rjh"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(192, 128, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0pbu"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(0, 192, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjbay"]
+atlas = ExtResource("6_0k4hf")
+region = Rect2(64, 192, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fu4bt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ruir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tv5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ppfbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igs4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlfnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rrup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dc7i0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fyp3k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clxru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsnn7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nv5sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e2rjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0pbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjbay")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Lock" type="Node2D" unique_id=575780063]
 script = ExtResource("1_uvtj7")
@@ -116,7 +223,7 @@ position = Vector2(65, 53)
 position = Vector2(81, 53)
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
-position = Vector2(24, 54)
+position = Vector2(4, 54)
 collision_layer = 1
 
 [node name="Line2D" type="Line2D" parent="." unique_id=464316042]
@@ -129,3 +236,7 @@ visible = false
 texture = SubResource("AtlasTexture_uvtj7")
 centered = false
 offset = Vector2(-6, -4)
+
+[node name="Front" type="AnimatedSprite2D" parent="." unique_id=1932648343]
+position = Vector2(55, 140)
+sprite_frames = SubResource("SpriteFrames_fu4bt")

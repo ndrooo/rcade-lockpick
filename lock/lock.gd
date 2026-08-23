@@ -46,8 +46,11 @@ func advance():
 		$Pick.visible = false
 		$Body.visible = true
 		disable()
+		$Front.play()
+		await $Front.animation_finished
 		picked.emit()
 	else:
 		bind_index += 1
+		$Front.frame = bind_index
 		binding_order[bind_index].bind_pins()
 		binding_order[bind_index].set_pin.connect(advance)
