@@ -1,3 +1,4 @@
+class_name Game
 extends Node2D
 
 @export var p1: Player
@@ -6,25 +7,32 @@ extends Node2D
 var lock_scene = preload("res://lock/lock.tscn")
 
 var elapsed = 0.0
-var stopwatch_running = true
+var stopwatch_running = false
 
-func _ready() -> void:
-	p1.anchor = $PlayerOneAnchor
-	p2.anchor = $PlayerTwoAnchor
-	p1.lock = $PlayerOneAnchor/Lock
-	p2.lock = $PlayerTwoAnchor/Lock
-	p1.locks_remaining -= 1
-	p2.locks_remaining -= 1
+signal game_ended
+
+func start() -> void:
+	stopwatch_running = true
+	if p1 != null:
+		p1.anchor = $PlayerOneAnchor
+		p1.lock = $PlayerOneAnchor/Lock
+	if p2 != null:
+		p2.anchor = $PlayerTwoAnchor
+		p2.lock = $PlayerTwoAnchor/Lock
 	# TODO: run a countdown
-	p1.lock.picked.connect(lock_picked.bind(p1))
-	p2.lock.picked.connect(lock_picked.bind(p2))
-	p1.lock.enable(p1)
-	p2.lock.enable(p2)
+	if p1 != null:
+		p1.locks_remaining -= 1
+		p1.lock.picked.connect(lock_picked.bind(p1))
+		p1.lock.enable(p1)
+	if p2 != null:
+		p2.locks_remaining -= 1
+		p2.lock.picked.connect(lock_picked.bind(p2))
+		p2.lock.enable(p2)
 
 func _process(delta: float) -> void:
 	if stopwatch_running:
 		elapsed += delta
-		$GameUI/TimeElapsed.text = "%0.2f" % elapsed
+	$GameUI/TimeElapsed.text = "%0.2f" % elapsed
 
 func lock_picked(player: Player) -> void:
 	# TODO: update the ui with timestamp
@@ -42,6 +50,10 @@ func lock_picked(player: Player) -> void:
 
 func trigger_win(player: Player) -> void:
 	stopwatch_running = false
-	p1.lock.disable()
-	p2.lock.disable()
+	if p1 != null:
+		p1.lock.disable()
+	if p2 != null:
+		p2.lock.disable()
 	$GameUI/WinLabel.text = "%s wins!" % player.player_name
+	await get_tree().create_timer(3.0).timeout
+	game_ended.emit()

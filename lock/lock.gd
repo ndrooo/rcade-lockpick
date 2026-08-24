@@ -22,7 +22,8 @@ var flip = false
 
 func _ready() -> void:
 	flip = scale.x < 0
-	$Body.visible = !cross_section
+	$Body.visible = true
+	pick.visible = false
 	for pin in $Pins.get_children():
 		var pin_stack: PinStack = pin
 		pin.pick = pick
@@ -35,6 +36,8 @@ func _ready() -> void:
 
 func enable(player: Player):
 	pick.enabled = true
+	pick.visible = true
+	$Body.visible = !cross_section
 	pick.set_player(player)
 
 func disable():

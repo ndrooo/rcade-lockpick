@@ -7,6 +7,7 @@ var anchor: Node2D
 var lock: Lock
 @export var locks_remaining: int = 3
 
+@export var start_action = ""
 @export var action_prefix = ""
 var up_action:
 	get:

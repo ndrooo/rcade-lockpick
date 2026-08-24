@@ -1,25 +1,14 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://o6fkw0nce3xw" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="Resource" uid="uid://ump10qpskhe0" path="res://player_one.tres" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock/lock.tscn" id="2_feb5d"]
-[ext_resource type="Script" uid="uid://dvqpohquqsvdb" path="res://player.gd" id="3_feb5d"]
-
-[sub_resource type="Resource" id="Resource_feb5d"]
-script = ExtResource("3_feb5d")
-player_name = "Player one"
-action_prefix = "p1"
-metadata/_custom_type_script = "uid://dvqpohquqsvdb"
-
-[sub_resource type="Resource" id="Resource_fc0e3"]
-script = ExtResource("3_feb5d")
-player_name = "Player two"
-action_prefix = "p2"
-metadata/_custom_type_script = "uid://dvqpohquqsvdb"
+[ext_resource type="Resource" uid="uid://c1f2irnhpeg5e" path="res://player_two.tres" id="3_7jktm"]
 
 [node name="Game" type="Node2D" unique_id=1400810246]
 script = ExtResource("1_e2o6t")
-p1 = SubResource("Resource_feb5d")
-p2 = SubResource("Resource_fc0e3")
+p1 = ExtResource("2_fc0e3")
+p2 = ExtResource("3_7jktm")
 
 [node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
 position = Vector2(44, 43)
