@@ -2,11 +2,11 @@
   "$schema": "https://rcade.dev/manifest.schema.json",
   "name": "lockpick",
   "display_name": "Lockpicking!",
-  "description": "Realistic locksport simulation!",
-  "visibility": "internal",
+  "description": "Realistic locksport simulation! Use the joystick to move your pick, find the binding pin and set it until you've set them all. First to pick three locks wins!",
+  "visibility": "public",
   "authors": [
     {
-      "display_name": "Andrew S"
+      "display_name": "Andrew Sherman"
     }
   ],
   "dependencies": [
