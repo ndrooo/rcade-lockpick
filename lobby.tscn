@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://4y7iuk7rya06"]
 
 [ext_resource type="Script" uid="uid://cw4tp1nvakonl" path="res://lobby.gd" id="1_tftiq"]
+[ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="1_x4164"]
 [ext_resource type="Texture2D" uid="uid://qx5i0wr02cqi" path="res://ui/p1_button.tres" id="2_1gg6n"]
 [ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="2_x4164"]
 [ext_resource type="Texture2D" uid="uid://ihafk2shrnip" path="res://ui/a_button.tres" id="3_x4164"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_x4164")
 theme_override_constants/separation = 0
 script = ExtResource("1_tftiq")
 theme_override_constants/separation = 0
@@ -19,10 +21,12 @@ theme_override_constants/separation = 0
 [node name="LobbyPanelP1" type="MarginContainer" parent="." unique_id=446396010]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_x4164")
 metadata/_edit_use_anchors_ = true
 
 [node name="NinePatchRect" type="NinePatchRect" parent="LobbyPanelP1" unique_id=747483846]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("2_x4164")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -32,45 +36,55 @@ patch_margin_bottom = 3
 [node name="Margin" type="MarginContainer" parent="LobbyPanelP1" unique_id=9255841]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_x4164")
 theme_override_constants/margin_left = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LobbyPanelP1/Margin" unique_id=232390652]
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("1_x4164")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="LobbyPanelP1/Margin/VBoxContainer" unique_id=26633784]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 
 [node name="TextureRect" type="TextureRect" parent="LobbyPanelP1/Margin/VBoxContainer/HBoxContainer" unique_id=34451141]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("2_1gg6n")
 
 [node name="JoinLabel1" type="Label" parent="LobbyPanelP1/Margin/VBoxContainer/HBoxContainer" unique_id=456462604]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 text = ": Join"
 
 [node name="ReadyBox1" type="HBoxContainer" parent="LobbyPanelP1/Margin/VBoxContainer" unique_id=1828000794]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+theme = ExtResource("1_x4164")
 
 [node name="ReadyButton1" type="TextureRect" parent="LobbyPanelP1/Margin/VBoxContainer/ReadyBox1" unique_id=1385758516]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("3_x4164")
 
 [node name="ReadyLabel1" type="Label" parent="LobbyPanelP1/Margin/VBoxContainer/ReadyBox1" unique_id=34718124]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 text = ": Ready"
 
 [node name="LobbyPanelP2" type="MarginContainer" parent="." unique_id=1503702859]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_x4164")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="LobbyPanelP2" unique_id=685683784]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("2_x4164")
 patch_margin_left = 3
 patch_margin_top = 3
@@ -80,35 +94,43 @@ patch_margin_bottom = 3
 [node name="Margin" type="MarginContainer" parent="LobbyPanelP2" unique_id=1415964816]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_x4164")
 theme_override_constants/margin_left = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LobbyPanelP2/Margin" unique_id=381719922]
 layout_mode = 2
 size_flags_vertical = 4
+theme = ExtResource("1_x4164")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="LobbyPanelP2/Margin/VBoxContainer" unique_id=1921364013]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 
 [node name="TextureRect" type="TextureRect" parent="LobbyPanelP2/Margin/VBoxContainer/HBoxContainer" unique_id=722488091]
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("4_8ldoj")
 
 [node name="JoinLabel2" type="Label" parent="LobbyPanelP2/Margin/VBoxContainer/HBoxContainer" unique_id=825348442]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 text = ": Join"
 
 [node name="ReadyBox2" type="HBoxContainer" parent="LobbyPanelP2/Margin/VBoxContainer" unique_id=338371156]
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+theme = ExtResource("1_x4164")
 
 [node name="ReadyButton2" type="TextureRect" parent="LobbyPanelP2/Margin/VBoxContainer/ReadyBox2" unique_id=581203873]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 texture = ExtResource("3_x4164")
 
 [node name="ReadyLabel2" type="Label" parent="LobbyPanelP2/Margin/VBoxContainer/ReadyBox2" unique_id=669357357]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("1_x4164")
 text = ": Ready"

@@ -32,7 +32,10 @@ func start() -> void:
 func _process(delta: float) -> void:
 	if stopwatch_running:
 		elapsed += delta
-	$GameUI/TimeElapsed.text = "%0.2f" % elapsed
+	var minutes = int(elapsed / 60.0)
+	var seconds = int(elapsed) % 60
+	var tenths = int(elapsed * 10) % 10
+	%TimeElapsed.text = "%01d:%02d.%01d" % [minutes, seconds, tenths]
 
 func lock_picked(player: Player) -> void:
 	# TODO: update the ui with timestamp

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://deb8dwg5r1mfe"]
+
+[ext_resource type="FontFile" uid="uid://cd3mc204gd55x" path="res://fonts/Gridking.ttf" id="1_rqugq"]
+
+[resource]
+Label/colors/font_color = Color(0.13333334, 0.1254902, 0.20392157, 1)
+Label/fonts/font = ExtResource("1_rqugq")
