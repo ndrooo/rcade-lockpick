@@ -4,19 +4,75 @@
 [ext_resource type="Resource" uid="uid://ump10qpskhe0" path="res://player_one.tres" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock/lock.tscn" id="2_feb5d"]
 [ext_resource type="Resource" uid="uid://c1f2irnhpeg5e" path="res://player_two.tres" id="3_7jktm"]
+[ext_resource type="Texture2D" uid="uid://bulkaf8mpl7un" path="res://sprites/bg_tile.png" id="4_7jktm"]
+[ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="5_ryrav"]
 
 [node name="Game" type="Node2D" unique_id=1400810246]
 script = ExtResource("1_e2o6t")
 p1 = ExtResource("2_fc0e3")
 p2 = ExtResource("3_7jktm")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1065940975]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1815905021]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_7jktm")
+stretch_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1529386648]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=577731606]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer" unique_id=390985051]
+layout_mode = 2
+texture = ExtResource("5_ryrav")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=892456006]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer2" unique_id=2123799244]
+layout_mode = 2
+texture = ExtResource("5_ryrav")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
 [node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
-position = Vector2(44, 43)
+position = Vector2(33, 42)
 
 [node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
 
 [node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
-position = Vector2(176, 43)
+position = Vector2(184, 43)
 
 [node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
 
