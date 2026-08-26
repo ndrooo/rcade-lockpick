@@ -16,7 +16,6 @@ grow_vertical = 2
 theme = ExtResource("1_x4164")
 theme_override_constants/separation = 0
 script = ExtResource("1_tftiq")
-theme_override_constants/separation = 0
 
 [node name="LobbyPanelP1" type="MarginContainer" parent="." unique_id=446396010]
 layout_mode = 2
