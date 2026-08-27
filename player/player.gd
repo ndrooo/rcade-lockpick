@@ -5,7 +5,8 @@ extends Resource
 
 var anchor: Node2D
 var lock: Lock
-@export var locks_remaining: int = 3
+@export var locks_to_pick = 3
+var locks_remaining: int = 3
 
 @export var start_action = ""
 @export var action_prefix = ""

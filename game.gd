@@ -21,11 +21,11 @@ func start() -> void:
 		p2.lock = $PlayerTwoAnchor/Lock
 	# TODO: run a countdown
 	if p1 != null:
-		p1.locks_remaining -= 1
+		p1.locks_remaining = p1.locks_to_pick - 1
 		p1.lock.picked.connect(lock_picked.bind(p1))
 		p1.lock.enable(p1)
 	if p2 != null:
-		p2.locks_remaining -= 1
+		p2.locks_remaining = p2.locks_to_pick - 1
 		p2.lock.picked.connect(lock_picked.bind(p2))
 		p2.lock.enable(p2)
 
