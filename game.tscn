@@ -68,12 +68,12 @@ patch_margin_right = 3
 patch_margin_bottom = 3
 
 [node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
-position = Vector2(33, 53)
+position = Vector2(37, 64)
 
 [node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
 
 [node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
-position = Vector2(184, 54)
+position = Vector2(195, 65)
 
 [node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
 
