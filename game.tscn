@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://o6fkw0nce3xw" path="res://game.gd" id="1_e2o6t"]
-[ext_resource type="Resource" uid="uid://ump10qpskhe0" path="res://player_one.tres" id="2_fc0e3"]
+[ext_resource type="Resource" uid="uid://ump10qpskhe0" path="res://player/player_one.tres" id="2_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bihlgp3weco85" path="res://lock/lock.tscn" id="2_feb5d"]
-[ext_resource type="Resource" uid="uid://c1f2irnhpeg5e" path="res://player_two.tres" id="3_7jktm"]
+[ext_resource type="Resource" uid="uid://c1f2irnhpeg5e" path="res://player/player_two.tres" id="3_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bulkaf8mpl7un" path="res://sprites/bg_tile.png" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="5_ryrav"]
 [ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="7_eow3j"]

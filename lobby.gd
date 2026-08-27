@@ -10,8 +10,8 @@ extends Control
 @onready var p2_ready_label = %ReadyLabel2
 
 var game = preload("res://game.tscn")
-var player_one = preload("res://player_one.tres")
-var player_two = preload("res://player_two.tres")
+var player_one = preload("res://player/player_one.tres")
+var player_two = preload("res://player/player_two.tres")
 
 var enabled = true
 
