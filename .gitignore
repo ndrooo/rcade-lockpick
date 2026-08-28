@@ -18,3 +18,10 @@ export_credentials.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+# Backstitch
+/addons/backstitch/
+/godot_editor/
+.backstitch_version
+/.backstitch/
+backstitch.cfg
