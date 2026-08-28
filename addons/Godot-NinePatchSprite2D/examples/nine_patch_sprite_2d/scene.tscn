@@ -101,7 +101,7 @@ _data = {
 &"default": SubResource("Animation_4jmqe")
 }
 
-[node name="Example" type="Control"]
+[node name="Example" type="Control" unique_id=558996196]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -111,7 +111,7 @@ anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Box" type="HBoxContainer" parent="."]
+[node name="Box" type="HBoxContainer" parent="." unique_id=25591420]
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 0
 offset_left = -480.0
@@ -122,7 +122,7 @@ theme_override_constants/separation = 96
 alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Stretch" type="Label" parent="Box"]
+[node name="Stretch" type="Label" parent="Box" unique_id=1593136669]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -133,7 +133,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Tile" type="Label" parent="Box"]
+[node name="Tile" type="Label" parent="Box" unique_id=1268618425]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -144,7 +144,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="TileFit" type="Label" parent="Box"]
+[node name="TileFit" type="Label" parent="Box" unique_id=1819200202]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -155,7 +155,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_lock_ = true
 
-[node name="Stretch" type="Node2D" parent="."]
+[node name="Stretch" type="Node2D" parent="." unique_id=1656421723]
 texture_filter = 1
 position = Vector2(-352, 60)
 script = ExtResource("1_hdqo7")
@@ -168,7 +168,7 @@ patch_margin_bottom = 32
 hframes = 3
 vframes = 3
 
-[node name="Tile" type="Node2D" parent="."]
+[node name="Tile" type="Node2D" parent="." unique_id=1137363357]
 texture_filter = 1
 position = Vector2(0, 60)
 script = ExtResource("1_hdqo7")
@@ -183,7 +183,7 @@ axis_stretch_vertical = 1
 hframes = 3
 vframes = 3
 
-[node name="TileFit" type="Node2D" parent="."]
+[node name="TileFit" type="Node2D" parent="." unique_id=970383881]
 texture_filter = 1
 position = Vector2(352, 60)
 script = ExtResource("1_hdqo7")
@@ -198,7 +198,7 @@ axis_stretch_vertical = 2
 hframes = 3
 vframes = 3
 
-[node name="Animation" type="AnimationPlayer" parent="."]
+[node name="Animation" type="AnimationPlayer" parent="." unique_id=1716779177]
 libraries = {
 &"": SubResource("AnimationLibrary_efs4g")
 }

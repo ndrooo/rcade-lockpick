@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://x2is00k80n1c"]
+
+[ext_resource type="PackedScene" uid="uid://4rurneouvr7b" path="res://lock/pick.tscn" id="1_1on0r"]
+[ext_resource type="PackedScene" uid="uid://cjad7esi5uopw" path="res://lock/pin_stack.tscn" id="2_86eb0"]
+
+[node name="PinStackTest" type="Node2D" unique_id=143737468]
+
+[node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("1_1on0r")]
+position = Vector2(15, 61)
+
+[node name="PinStack" parent="." unique_id=424966032 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
+position = Vector2(15, 58)
+pick = NodePath("../Pick")

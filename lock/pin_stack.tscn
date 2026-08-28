@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://du5a18j4dsss5" path="res://sprites/driver_pin.png" id="2_y4xag"]
 [ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="3_v7huv"]
 [ext_resource type="Texture2D" uid="uid://d1iajboix8tuw" path="res://sprites/key_pin.png" id="4_m4u8h"]
+[ext_resource type="Texture2D" uid="uid://bnbbn63bt23u2" path="res://sprites/set_vfx.png" id="5_m4u8h"]
+[ext_resource type="Texture2D" uid="uid://cg5f4aagrf0bm" path="res://sprites/scrape_vfx.png" id="6_m4u8h"]
+[ext_resource type="AudioStream" uid="uid://i4hgqcv36ivs" path="res://sfx/pin_set_sfx.mp3" id="6_v7huv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wk44l"]
 atlas = ExtResource("2_y4xag")
@@ -22,8 +25,132 @@ size = Vector2(7, 11)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_21d20"]
 size = Vector2(9, 9)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp5a3"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p8rr4"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok7kp"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gotj0"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5i3uv"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_li786"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12pfl"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksgj2"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sgon"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jndk"]
+atlas = ExtResource("5_m4u8h")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v7huv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp5a3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p8rr4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok7kp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gotj0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5i3uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_li786")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_12pfl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksgj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sgon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jndk")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1oaie"]
+atlas = ExtResource("6_m4u8h")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cewfb"]
+atlas = ExtResource("6_m4u8h")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82uny"]
+atlas = ExtResource("6_m4u8h")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idq4c"]
+atlas = ExtResource("6_m4u8h")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_huv1k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1oaie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cewfb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_82uny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idq4c")
+}],
+"loop": 1,
+"name": &"main",
+"speed": 5.0
+}]
+
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_m4u8h"]
+mix_rate = 22050.0
+
 [node name="PinStack" type="Node2D" unique_id=424966032]
 script = ExtResource("1_pbnht")
+scraping_volume = 0.2
 
 [node name="Spring" type="Node2D" parent="." unique_id=1349144139]
 
@@ -75,6 +202,27 @@ position = Vector2(0, -11)
 position = Vector2(4.5, 3.5)
 shape = SubResource("RectangleShape2D_21d20")
 debug_color = Color(0.972549, 0, 0.4392157, 0.09411765)
+
+[node name="PinSetVFX" type="AnimatedSprite2D" parent="." unique_id=33996184]
+position = Vector2(10, -11)
+sprite_frames = SubResource("SpriteFrames_v7huv")
+frame = 11
+frame_progress = 1.0
+
+[node name="PinSetSFX" type="AudioStreamPlayer2D" parent="." unique_id=771895119]
+stream = ExtResource("6_v7huv")
+volume_db = 10.0
+
+[node name="ScrapingVFX" type="AnimatedSprite2D" parent="." unique_id=402568219]
+visible = false
+position = Vector2(-2, -14)
+sprite_frames = SubResource("SpriteFrames_huv1k")
+animation = &"main"
+autoplay = "main"
+
+[node name="ScrapingSFX" type="AudioStreamPlayer2D" parent="." unique_id=514683780]
+stream = SubResource("AudioStreamGenerator_m4u8h")
+volume_db = 1.0
 
 [connection signal="body_entered" from="KeyPin" to="." method="_on_key_pin_body_entered"]
 [connection signal="body_exited" from="KeyPin" to="." method="_on_key_pin_body_exited"]

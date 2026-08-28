@@ -139,7 +139,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Lock" type="Node2D" unique_id=575780063]
@@ -240,3 +240,5 @@ offset = Vector2(-6, -4)
 [node name="Front" type="AnimatedSprite2D" parent="." unique_id=1932648343]
 position = Vector2(52, 134)
 sprite_frames = SubResource("SpriteFrames_fu4bt")
+frame = 13
+frame_progress = 1.0
