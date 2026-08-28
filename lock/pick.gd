@@ -6,6 +6,13 @@ extends CharacterBody2D
 @export var binding_speed = 14.0
 @export var x_speed = 30.0
 @export var enabled = true
+@export var player: Player:
+	set(new_player):
+		player = new_player
+		up_action = player.up_action
+		down_action = player.down_action
+		left_action = player.left_action
+		right_action = player.right_action
 
 var up_action = ""
 var down_action = ""
@@ -13,12 +20,6 @@ var left_action = ""
 var right_action = ""
 
 var touching_pin_stacks: Dictionary[PinStack, bool] = {}
-
-func set_player(player: Player) -> void:
-	up_action = player.up_action
-	down_action = player.down_action
-	left_action = player.left_action
-	right_action = player.right_action
 
 func _physics_process(_delta: float) -> void:
 	if not enabled:

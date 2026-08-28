@@ -38,7 +38,7 @@ func enable(player: Player):
 	pick.enabled = true
 	pick.visible = true
 	$Body.visible = !cross_section
-	pick.set_player(player)
+	pick.player = player
 
 func disable():
 	pick.enabled = false

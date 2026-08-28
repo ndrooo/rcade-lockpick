@@ -15,7 +15,7 @@ extends Node2D
 var scraping = false
 var scraping_audio_phase = 0.0
 
-var binding = false
+@export var binding = false
 var pin_set = false
 signal set_pin
 

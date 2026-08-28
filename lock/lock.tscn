@@ -224,7 +224,6 @@ position = Vector2(81, 53)
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
 position = Vector2(4, 54)
-collision_layer = 1
 
 [node name="Line2D" type="Line2D" parent="." unique_id=464316042]
 position = Vector2(0, 26)
