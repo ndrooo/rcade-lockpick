@@ -3,10 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dhsslimsg7mmq" path="res://sprites/pick.png" id="1_egge6"]
 [ext_resource type="Script" uid="uid://bnmk5k38j6gdp" path="res://lock/pick.gd" id="1_qch5m"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t56uw"]
-atlas = ExtResource("1_egge6")
-region = Rect2(0, 0, 128, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_08hu3"]
 atlas = ExtResource("1_egge6")
 region = Rect2(0, 0, 128, 64)
@@ -50,13 +46,6 @@ size = Vector2(8, 29)
 script = ExtResource("1_qch5m")
 animation_move_step = 8.0
 animation_move_offset = 32.0
-
-[node name="Sprite" type="Sprite2D" parent="." unique_id=997395451]
-visible = false
-position = Vector2(-29, -53)
-texture = SubResource("AtlasTexture_t56uw")
-centered = false
-offset = Vector2(-74, 52)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1022829176]
 position = Vector2(-39, 31)

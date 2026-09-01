@@ -11,34 +11,34 @@ position = Vector2(166, 124)
 player = ExtResource("2_hb8lt")
 
 [node name="PinStack" parent="." unique_id=424966032 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(111, 122)
+position = Vector2(111.5, 122)
 key_pin_height = 11
 pick = NodePath("../Pick")
 
 [node name="PinStack3" parent="." unique_id=1941122171 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(131, 122)
+position = Vector2(131.5, 122)
 key_pin_height = 11
 pick = NodePath("../Pick")
 
 [node name="PinStack4" parent="." unique_id=2144552831 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(148, 122)
+position = Vector2(148.5, 122)
 key_pin_height = 11
 pick = NodePath("../Pick")
 
 [node name="PinStack2" parent="." unique_id=1693031721 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(166, 122)
+position = Vector2(166.5, 122)
 binding = true
 key_pin_height = 14
 pick = NodePath("../Pick")
 
 [node name="PinStack5" parent="." unique_id=796614597 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(183, 122)
+position = Vector2(183.5, 122)
 binding = true
 key_pin_height = 14
 pick = NodePath("../Pick")
 
 [node name="PinStack6" parent="." unique_id=335614630 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
-position = Vector2(201, 122)
+position = Vector2(201.5, 122)
 binding = true
 key_pin_height = 14
 pick = NodePath("../Pick")

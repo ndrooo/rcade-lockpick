@@ -204,23 +204,22 @@ shape = SubResource("RectangleShape2D_p554e")
 debug_color = Color(1, 1, 1, 0.05882353)
 
 [node name="Pins" type="Node2D" parent="." unique_id=409930028]
-position = Vector2(0, -2)
+position = Vector2(53.5, 51)
 
 [node name="PinStack" parent="Pins" unique_id=424966032 instance=ExtResource("2_y8v6n")]
-position = Vector2(17, 53)
+position = Vector2(-32, 0)
 key_pin_height = 8
 
 [node name="PinStack2" parent="Pins" unique_id=1196165361 instance=ExtResource("2_y8v6n")]
-position = Vector2(33, 53)
+position = Vector2(-16, 0)
 
 [node name="PinStack3" parent="Pins" unique_id=1235819778 instance=ExtResource("2_y8v6n")]
-position = Vector2(49, 53)
 
 [node name="PinStack4" parent="Pins" unique_id=1576003560 instance=ExtResource("2_y8v6n")]
-position = Vector2(65, 53)
+position = Vector2(16, 0)
 
 [node name="PinStack5" parent="Pins" unique_id=2116540305 instance=ExtResource("2_y8v6n")]
-position = Vector2(81, 53)
+position = Vector2(32, 0)
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
 position = Vector2(4, 54)

@@ -18,14 +18,16 @@ var bind_index = 0:
 
 signal picked
 
-var flip = false
+@onready var flipped = false
 
 func _ready() -> void:
-	flip = scale.x < 0
+	flipped = global_scale.y < 0
+	$Front.scale.x = -1 if flipped else 1
 	$Body.visible = true
 	pick.visible = false
 	for pin in $Pins.get_children():
 		var pin_stack: PinStack = pin
+		pin.scale.x = -1 if flipped else 1
 		pin.pick = pick
 		pin_stack.key_pin_height = randi() % 10 + 10
 	binding_order.assign($Pins.get_children())
