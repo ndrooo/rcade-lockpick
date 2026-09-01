@@ -44,10 +44,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu4bt"]
-size = Vector2(8, 28)
+size = Vector2(8, 29)
 
 [node name="Pick" type="CharacterBody2D" unique_id=1340085665]
 script = ExtResource("1_qch5m")
+animation_move_step = 8.0
+animation_move_offset = 32.0
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=997395451]
 visible = false
@@ -61,6 +63,6 @@ position = Vector2(-39, 31)
 sprite_frames = SubResource("SpriteFrames_t56uw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629727395]
-position = Vector2(5, 14)
+position = Vector2(5, 14.5)
 shape = SubResource("RectangleShape2D_fu4bt")
 debug_color = Color(0.7743461, 0.14686689, 1, 0.41960785)

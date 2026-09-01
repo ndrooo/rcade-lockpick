@@ -199,7 +199,7 @@ shape = SubResource("RectangleShape2D_d4h6p")
 debug_color = Color(1, 1, 1, 0.05882353)
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Cross-section/StaticBody2D" unique_id=347551499]
-position = Vector2(49.5, 24.5)
+position = Vector2(49.5, 26.5)
 shape = SubResource("RectangleShape2D_p554e")
 debug_color = Color(1, 1, 1, 0.05882353)
 
