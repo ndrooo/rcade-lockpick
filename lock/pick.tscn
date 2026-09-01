@@ -5,21 +5,62 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t56uw"]
 atlas = ExtResource("1_egge6")
-region = Rect2(0, 45, 100, 60)
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08hu3"]
+atlas = ExtResource("1_egge6")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lnjt"]
+atlas = ExtResource("1_egge6")
+region = Rect2(0, 64, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tj20"]
+atlas = ExtResource("1_egge6")
+region = Rect2(0, 128, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgl61"]
+atlas = ExtResource("1_egge6")
+region = Rect2(0, 192, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t56uw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08hu3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lnjt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tj20")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgl61")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fu4bt"]
-size = Vector2(8, 26)
+size = Vector2(8, 28)
 
 [node name="Pick" type="CharacterBody2D" unique_id=1340085665]
 script = ExtResource("1_qch5m")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=997395451]
-position = Vector2(-17, -53)
+visible = false
+position = Vector2(-29, -53)
 texture = SubResource("AtlasTexture_t56uw")
 centered = false
 offset = Vector2(-74, 52)
 
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1022829176]
+position = Vector2(-39, 31)
+sprite_frames = SubResource("SpriteFrames_t56uw")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=629727395]
-position = Vector2(5, 13)
+position = Vector2(5, 14)
 shape = SubResource("RectangleShape2D_fu4bt")
 debug_color = Color(0.7743461, 0.14686689, 1, 0.41960785)

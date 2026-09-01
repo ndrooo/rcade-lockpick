@@ -13,6 +13,11 @@ extends CharacterBody2D
 		down_action = player.down_action
 		left_action = player.left_action
 		right_action = player.right_action
+@export var animation_move_step = 10.0
+@export var animation_move_offset = 40.0
+
+@onready var sprite = $AnimatedSprite2D
+@onready var y_origin = position.y
 
 var up_action = ""
 var down_action = ""
@@ -42,3 +47,13 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed(right_action):
 		velocity += Vector2.RIGHT * x_speed
 	move_and_slide()
+
+func _process(_delta: float) -> void:
+	if (position.y - y_origin + animation_move_offset) > animation_move_step * 3:
+		sprite.frame = 3
+	elif (position.y - y_origin + animation_move_offset) > animation_move_step * 2:
+		sprite.frame = 2
+	elif (position.y - y_origin + animation_move_offset) > animation_move_step:
+		sprite.frame = 1
+	else:
+		sprite.frame = 0

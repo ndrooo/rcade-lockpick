@@ -239,5 +239,3 @@ offset = Vector2(-6, -4)
 [node name="Front" type="AnimatedSprite2D" parent="." unique_id=1932648343]
 position = Vector2(52, 134)
 sprite_frames = SubResource("SpriteFrames_fu4bt")
-frame = 13
-frame_progress = 1.0
