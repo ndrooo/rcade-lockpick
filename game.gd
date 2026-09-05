@@ -16,9 +16,11 @@ func start() -> void:
 	if p1 != null:
 		p1.anchor = $PlayerOneAnchor
 		p1.lock = $PlayerOneAnchor/Lock
+		p1.lap_timer = %LapTimerP1
 	if p2 != null:
 		p2.anchor = $PlayerTwoAnchor
 		p2.lock = $PlayerTwoAnchor/Lock
+		p2.lap_timer = %LapTimerP2
 	# TODO: run a countdown
 	if p1 != null:
 		p1.locks_remaining = p1.locks_to_pick - 1
@@ -32,13 +34,10 @@ func start() -> void:
 func _process(delta: float) -> void:
 	if stopwatch_running:
 		elapsed += delta
-	var minutes = int(elapsed / 60.0)
-	var seconds = int(elapsed) % 60
-	var tenths = int(elapsed * 10) % 10
-	%TimeElapsed.text = "%01d:%02d.%01d" % [minutes, seconds, tenths]
+	%TimeElapsed.text = Util.get_long_time(elapsed)
 
 func lock_picked(player: Player) -> void:
-	# TODO: update the ui with timestamp
+	player.lap_timer.record(elapsed)
 	if player.locks_remaining <= 0:
 		trigger_win(player)
 		return
@@ -48,7 +47,6 @@ func lock_picked(player: Player) -> void:
 	player.lock.queue_free()
 	player.lock = new_lock
 	player.lock.picked.connect(lock_picked.bind(player))
-	# TODO: run a countdown
 	player.lock.enable(player)
 
 func trigger_win(player: Player) -> void:

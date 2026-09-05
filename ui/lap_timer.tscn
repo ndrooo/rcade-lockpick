@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ua4bf80bc4ty"]
+
+[ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="1_7ngfk"]
+[ext_resource type="Script" uid="uid://b8qn358gj7yda" path="res://ui/lap_timer.gd" id="2_5xyif"]
+
+[node name="LapTimer" type="VBoxContainer" unique_id=1291832489]
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = ExtResource("1_7ngfk")
+script = ExtResource("2_5xyif")
