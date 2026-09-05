@@ -41,6 +41,9 @@ func enable(player: Player):
 	pick.visible = true
 	$Body.visible = !cross_section
 	pick.player = player
+	for pin in $Pins.get_children():
+		var pin_stack: PinStack = pin
+		pin_stack.audio_bus = player.audio_bus
 
 func disable():
 	pick.enabled = false

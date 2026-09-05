@@ -8,8 +8,11 @@ var lock: Lock
 @export var locks_to_pick = 3
 var locks_remaining: int = 3
 
+@export var audio_bus: StringName = &"Master"
+
 @export var start_action = ""
 @export var action_prefix = ""
+
 var up_action:
 	get:
 		return "%s_up" % action_prefix

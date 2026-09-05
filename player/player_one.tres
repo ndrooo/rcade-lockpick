@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ytj40")
 player_name = "Player one"
+audio_bus = &"Left"
 start_action = "one_player"
 action_prefix = "p1"
 metadata/_custom_type_script = "uid://dvqpohquqsvdb"

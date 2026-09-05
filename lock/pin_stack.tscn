@@ -150,7 +150,6 @@ mix_rate = 22050.0
 
 [node name="PinStack" type="Node2D" unique_id=424966032]
 script = ExtResource("1_pbnht")
-scraping_volume = 0.2
 
 [node name="Spring" type="Node2D" parent="." unique_id=1349144139]
 position = Vector2(-4, 0)

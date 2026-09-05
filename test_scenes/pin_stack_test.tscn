@@ -27,12 +27,14 @@ pick = NodePath("../Pick")
 
 [node name="PinStack2" parent="." unique_id=1693031721 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
 position = Vector2(166.5, 122)
+audio_bus = &"Left"
 binding = true
 key_pin_height = 14
 pick = NodePath("../Pick")
 
 [node name="PinStack5" parent="." unique_id=796614597 node_paths=PackedStringArray("pick") instance=ExtResource("2_86eb0")]
 position = Vector2(183.5, 122)
+audio_bus = &"Right"
 binding = true
 key_pin_height = 14
 pick = NodePath("../Pick")

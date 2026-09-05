@@ -9,7 +9,13 @@ extends Node2D
 @export var fall_speed = 80
 @export var shear_height = 25
 @export var scraping_hz = 440.0
-@export var scraping_volume = 0.1
+@export var scraping_volume = 0.2
+@export var audio_bus: StringName = &"Master":
+	set (new_bus):
+		audio_bus = new_bus
+		$PinSetSFX.bus = audio_bus
+		$ScrapingSFX.bus = audio_bus
+		
 
 @onready var last_height = driver.position.y
 var scraping = false
@@ -57,8 +63,7 @@ func _process(_delta: float) -> void:
 		var increment = scraping_hz / scraping_sfx_stream.mix_rate
 		var playback = scraping_sfx.get_stream_playback()
 		for frame in range(playback.get_frames_available()):
-			# var amplitude = sin(scraping_audio_phase * TAU)
-			var amplitude = randf_range(-0.5, 0.5) * (sin(scraping_audio_phase * TAU) / 2.0)
+			var amplitude = randf_range(-0.8, 0.8) * (sin(scraping_audio_phase * TAU) / 2.0)
 			playback.push_frame(Vector2.ONE * amplitude * scraping_volume)
 			scraping_audio_phase = fmod(scraping_audio_phase + increment, 1.0)
 
