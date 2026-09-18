@@ -5,6 +5,7 @@ extends Node2D
 @export var p2: Player
 
 var lock_scene = preload("res://lock/lock.tscn")
+var lap_timer_scene = preload("res://ui/lap_timer.tscn")
 
 var elapsed = 0.0
 var stopwatch_running = false
@@ -16,11 +17,11 @@ func start() -> void:
 	if p1 != null:
 		p1.anchor = $PlayerOneAnchor
 		p1.lock = $PlayerOneAnchor/Lock
-		p1.lap_timer = %LapTimerP1
+		p1.side = LapTimer.Side.LEFT
 	if p2 != null:
 		p2.anchor = $PlayerTwoAnchor
 		p2.lock = $PlayerTwoAnchor/Lock
-		p2.lap_timer = %LapTimerP2
+		p2.side = LapTimer.Side.RIGHT
 	# TODO: run a countdown
 	if p1 != null:
 		p1.locks_remaining = p1.locks_to_pick - 1
@@ -37,7 +38,11 @@ func _process(delta: float) -> void:
 	%TimeElapsed.text = Util.get_long_time(elapsed)
 
 func lock_picked(player: Player) -> void:
-	player.lap_timer.record(elapsed)
+	var lap_timer = lap_timer_scene.instantiate() as LapTimer
+	lap_timer.side = player.side
+	lap_timer.time = elapsed
+	%LapTimes.add_child(lap_timer)
+
 	if player.locks_remaining <= 0:
 		trigger_win(player)
 		return
@@ -55,6 +60,8 @@ func trigger_win(player: Player) -> void:
 		p1.lock.disable()
 	if p2 != null:
 		p2.lock.disable()
-	$GameUI/WinLabel.text = "%s wins!" % player.player_name
+	%WinLabel.text = "%s wins!" % player.player_name
+	%WinUI.visible = true
 	await get_tree().create_timer(3.0).timeout
+	%WinUI.visible = false
 	game_ended.emit()

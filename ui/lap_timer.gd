@@ -1,8 +1,19 @@
 class_name LapTimer
-extends VBoxContainer
+extends Container
 
-func record(lap_time: int):
-	var lap_label = Label.new()
-	lap_label.text = Util.get_short_time(lap_time)
-	add_child(lap_label)
-	move_child(lap_label, 0)
+enum Side {LEFT, RIGHT}
+
+@export var side: LapTimer.Side = Side.LEFT:
+	set(value):
+		side = value
+		if value == Side.LEFT:
+			%LeftPointer.visible = true
+			%RightPointer.visible = false
+		else:
+			%LeftPointer.visible = false
+			%RightPointer.visible = true
+
+@export var time: float = 0.0:
+	set(value):
+		time = value
+		%Time.text = Util.get_short_time(time)

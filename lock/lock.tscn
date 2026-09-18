@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://uvrdirtadgfv" path="res://lock/lock.gd" id="1_uvtj7"]
 [ext_resource type="Texture2D" uid="uid://s00srsfwycyo" path="res://sprites/bg.png" id="1_x87c7"]
+[ext_resource type="Script" uid="uid://c2j1qdkvd1cjs" path="res://addons/Godot-NinePatchSprite2D/addons/nine_patch_sprite_2d/nine_patch_sprite_2d.gd" id="2_4tv5c"]
 [ext_resource type="PackedScene" uid="uid://cjad7esi5uopw" path="res://lock/pin_stack.tscn" id="2_y8v6n"]
+[ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="3_ppfbi"]
 [ext_resource type="PackedScene" uid="uid://4rurneouvr7b" path="res://lock/pick.tscn" id="4_rmqde"]
 [ext_resource type="Texture2D" uid="uid://m5aj6pugv464" path="res://sprites/body.png" id="5_rmqde"]
 [ext_resource type="Texture2D" uid="uid://blaop02kdhene" path="res://sprites/front.png" id="6_0k4hf"]
@@ -144,6 +146,20 @@ animations = [{
 
 [node name="Lock" type="Node2D" unique_id=575780063]
 script = ExtResource("1_uvtj7")
+
+[node name="NinePatchSprite2D" type="Node2D" parent="." unique_id=486200025]
+position = Vector2(-3, -12)
+script = ExtResource("2_4tv5c")
+texture = ExtResource("3_ppfbi")
+size = Vector2(113, 192)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+centered = false
+metadata/_custom_type_script = "uid://c2j1qdkvd1cjs"
 
 [node name="Cross-section" type="Node2D" parent="." unique_id=1849472167]
 

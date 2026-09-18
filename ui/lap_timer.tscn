@@ -2,9 +2,45 @@
 
 [ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="1_7ngfk"]
 [ext_resource type="Script" uid="uid://b8qn358gj7yda" path="res://ui/lap_timer.gd" id="2_5xyif"]
+[ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="3_7boea"]
 
-[node name="LapTimer" type="VBoxContainer" unique_id=1291832489]
-size_flags_horizontal = 0
-size_flags_vertical = 8
+[node name="LapTimer" type="MarginContainer" unique_id=876238714]
+offset_right = 60.0
+offset_bottom = 29.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("1_7ngfk")
 script = ExtResource("2_5xyif")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=860105875]
+layout_mode = 2
+texture = ExtResource("3_7boea")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=529219615]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=2099006079]
+layout_mode = 2
+
+[node name="LeftPointer" type="Label" parent="MarginContainer/HBoxContainer" unique_id=1797593268]
+unique_name_in_owner = true
+layout_mode = 2
+text = "<"
+
+[node name="Time" type="Label" parent="MarginContainer/HBoxContainer" unique_id=629988298]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0:00"
+
+[node name="RightPointer" type="Label" parent="MarginContainer/HBoxContainer" unique_id=2046614740]
+unique_name_in_owner = true
+layout_mode = 2
+text = ">"

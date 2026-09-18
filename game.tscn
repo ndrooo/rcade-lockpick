@@ -6,7 +6,6 @@
 [ext_resource type="Resource" uid="uid://c1f2irnhpeg5e" path="res://player/player_two.tres" id="3_7jktm"]
 [ext_resource type="Texture2D" uid="uid://bulkaf8mpl7un" path="res://sprites/bg_tile.png" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="5_ryrav"]
-[ext_resource type="PackedScene" uid="uid://ua4bf80bc4ty" path="res://ui/lap_timer.tscn" id="6_j5wjh"]
 [ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="7_eow3j"]
 
 [node name="Game" type="Node2D" unique_id=1400810246]
@@ -14,10 +13,10 @@ script = ExtResource("1_e2o6t")
 p1 = ExtResource("2_fc0e3")
 p2 = ExtResource("3_7jktm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1065940975]
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1065940975]
 layer = -1
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1815905021]
+[node name="Background" type="TextureRect" parent="GameUI" unique_id=1815905021]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,99 +25,7 @@ grow_vertical = 2
 texture = ExtResource("4_7jktm")
 stretch_mode = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1529386648]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=577731606]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 25
-theme_override_constants/margin_bottom = 20
-
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer" unique_id=390985051]
-layout_mode = 2
-texture = ExtResource("5_ryrav")
-region_rect = Rect2(0, 0, 32, 32)
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer/MarginContainer" unique_id=1185632754]
-layout_mode = 2
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="LapTimerP1" parent="CanvasLayer/HBoxContainer/MarginContainer/MarginContainer" unique_id=1291832489 instance=ExtResource("6_j5wjh")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=892456006]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 25
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 20
-
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer2" unique_id=2123799244]
-layout_mode = 2
-texture = ExtResource("5_ryrav")
-region_rect = Rect2(0, 0, 32, 32)
-patch_margin_left = 3
-patch_margin_top = 3
-patch_margin_right = 3
-patch_margin_bottom = 3
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer/MarginContainer2" unique_id=159721948]
-layout_mode = 2
-theme_override_constants/margin_left = 6
-theme_override_constants/margin_top = 6
-theme_override_constants/margin_right = 6
-theme_override_constants/margin_bottom = 6
-
-[node name="LapTimerP2" parent="CanvasLayer/HBoxContainer/MarginContainer2/MarginContainer" unique_id=66334886 instance=ExtResource("6_j5wjh")]
-unique_name_in_owner = true
-layout_mode = 2
-
-[node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
-position = Vector2(33, 64)
-
-[node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
-
-[node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
-position = Vector2(303, 65)
-scale = Vector2(-1, 1)
-
-[node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
-
-[node name="GameUI" type="CanvasLayer" parent="." unique_id=292398793]
-
-[node name="WinLabel" type="Label" parent="GameUI" unique_id=1899310942]
-unique_name_in_owner = true
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -19.0
-offset_top = -81.0
-offset_right = 21.0
-offset_bottom = -58.0
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("7_eow3j")
-
-[node name="MarginContainer" type="MarginContainer" parent="GameUI" unique_id=382959127]
+[node name="TimerContainer" type="MarginContainer" parent="GameUI" unique_id=382959127]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -130,7 +37,7 @@ grow_horizontal = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="NinePatchRect" type="NinePatchRect" parent="GameUI/MarginContainer" unique_id=599754900]
+[node name="NinePatchRect" type="NinePatchRect" parent="GameUI/TimerContainer" unique_id=599754900]
 layout_mode = 2
 texture = ExtResource("5_ryrav")
 patch_margin_left = 3
@@ -138,15 +45,75 @@ patch_margin_top = 3
 patch_margin_right = 3
 patch_margin_bottom = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="GameUI/MarginContainer" unique_id=1049240009]
+[node name="MarginContainer" type="MarginContainer" parent="GameUI/TimerContainer" unique_id=1049240009]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 5
 
-[node name="TimeElapsed" type="Label" parent="GameUI/MarginContainer/MarginContainer" unique_id=297491854]
+[node name="TimeElapsed" type="Label" parent="GameUI/TimerContainer/MarginContainer" unique_id=297491854]
 unique_name_in_owner = true
 layout_mode = 2
 theme = ExtResource("7_eow3j")
 text = "0:00.0"
 horizontal_alignment = 1
+
+[node name="LapTimerContainer" type="MarginContainer" parent="GameUI" unique_id=792255808]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 52
+
+[node name="LapTimes" type="VBoxContainer" parent="GameUI/LapTimerContainer" unique_id=2133996558]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
+position = Vector2(24, 64)
+
+[node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
+
+[node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
+position = Vector2(312, 64)
+scale = Vector2(-1, 1)
+
+[node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
+
+[node name="WinUI" type="CanvasLayer" parent="." unique_id=292398793]
+unique_name_in_owner = true
+visible = false
+
+[node name="CenterContainer" type="CenterContainer" parent="WinUI" unique_id=1256588291]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="WinUI/CenterContainer" unique_id=919967088]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="WinUI/CenterContainer/MarginContainer" unique_id=1774548571]
+layout_mode = 2
+texture = ExtResource("5_ryrav")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="WinUI/CenterContainer/MarginContainer" unique_id=1378398742]
+layout_mode = 2
+theme_override_constants/margin_left = 9
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="WinLabel" type="Label" parent="WinUI/CenterContainer/MarginContainer/MarginContainer" unique_id=1899310942]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("7_eow3j")
+text = "Some player won"

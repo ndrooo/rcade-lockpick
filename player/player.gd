@@ -5,7 +5,7 @@ extends Resource
 
 var anchor: Node2D
 var lock: Lock
-var lap_timer: LapTimer
+var side: LapTimer.Side
 @export var locks_to_pick = 3
 var locks_remaining: int = 3
 
