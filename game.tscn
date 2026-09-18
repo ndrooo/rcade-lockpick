@@ -37,10 +37,10 @@ theme_override_constants/separation = 0
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=577731606]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 20
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer" unique_id=390985051]
 layout_mode = 2
@@ -65,10 +65,10 @@ layout_mode = 2
 [node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/HBoxContainer" unique_id=892456006]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 40
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 10
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 20
 
 [node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/HBoxContainer/MarginContainer2" unique_id=2123799244]
 layout_mode = 2
@@ -91,12 +91,12 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="PlayerOneAnchor" type="Node2D" parent="." unique_id=952834447]
-position = Vector2(37, 64)
+position = Vector2(33, 64)
 
 [node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
 
 [node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
-position = Vector2(301, 65)
+position = Vector2(303, 65)
 scale = Vector2(-1, 1)
 
 [node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]

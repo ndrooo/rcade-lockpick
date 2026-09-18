@@ -9,7 +9,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fu4bt"]
 atlas = ExtResource("1_x87c7")
-region = Rect2(10, 20, 107, 88)
+region = Rect2(4, 16, 113, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qtk48"]
 size = Vector2(24, 42)
@@ -148,6 +148,7 @@ script = ExtResource("1_uvtj7")
 [node name="Cross-section" type="Node2D" parent="." unique_id=1849472167]
 
 [node name="Background" type="Sprite2D" parent="Cross-section" unique_id=1742647201]
+position = Vector2(-6, -4)
 texture = SubResource("AtlasTexture_fu4bt")
 centered = false
 
@@ -225,6 +226,7 @@ position = Vector2(32, 0)
 position = Vector2(4, 54)
 
 [node name="Line2D" type="Line2D" parent="." unique_id=464316042]
+visible = false
 position = Vector2(0, 26)
 points = PackedVector2Array(0, 0.5, 107, 0.5)
 width = 1.0
