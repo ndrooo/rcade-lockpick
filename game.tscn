@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bulkaf8mpl7un" path="res://sprites/bg_tile.png" id="4_7jktm"]
 [ext_resource type="Texture2D" uid="uid://cj06b2ple03ad" path="res://sprites/panel.png" id="5_ryrav"]
 [ext_resource type="Theme" uid="uid://deb8dwg5r1mfe" path="res://ui/theme.tres" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://b0lx8uxg057qo" path="res://gamecontroller/haptics.tscn" id="8_j5wjh"]
 
 [node name="Game" type="Node2D" unique_id=1400810246]
 script = ExtResource("1_e2o6t")
@@ -77,11 +78,15 @@ position = Vector2(24, 64)
 
 [node name="Lock" parent="PlayerOneAnchor" unique_id=575780063 instance=ExtResource("2_feb5d")]
 
+[node name="Haptics" parent="PlayerOneAnchor" unique_id=1695012311 instance=ExtResource("8_j5wjh")]
+
 [node name="PlayerTwoAnchor" type="Node2D" parent="." unique_id=2056402247]
 position = Vector2(312, 64)
 scale = Vector2(-1, 1)
 
 [node name="Lock" parent="PlayerTwoAnchor" unique_id=1171740846 instance=ExtResource("2_feb5d")]
+
+[node name="Haptics" parent="PlayerTwoAnchor" unique_id=864885123 instance=ExtResource("8_j5wjh")]
 
 [node name="WinUI" type="CanvasLayer" parent="." unique_id=292398793]
 unique_name_in_owner = true

@@ -17,10 +17,14 @@ func start() -> void:
 	if p1 != null:
 		p1.anchor = $PlayerOneAnchor
 		p1.lock = $PlayerOneAnchor/Lock
+		p1.haptics = $PlayerOneAnchor/Haptics
+		p1.haptics.set_device_id(0)
 		p1.side = LapTimer.Side.LEFT
 	if p2 != null:
 		p2.anchor = $PlayerTwoAnchor
 		p2.lock = $PlayerTwoAnchor/Lock
+		p2.haptics = $PlayerTwoAnchor/Haptics
+		p2.haptics.set_device_id(1)
 		p2.side = LapTimer.Side.RIGHT
 	# TODO: run a countdown
 	if p1 != null:
