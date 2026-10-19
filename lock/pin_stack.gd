@@ -27,7 +27,6 @@ signal set_pin
 
 signal set_pin_haptics
 signal scrape_haptics
-signal stop_haptics
 
 @export var key_pin_height = 10:
 	set(new_height):
