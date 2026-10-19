@@ -82,7 +82,6 @@ func toggle_scraping(is_scraping):
 		scrape_haptics.emit()
 	else:
 		scraping_sfx.stop()
-		stop_haptics.emit()
 
 func pin_set_effect():
 	($PinSetSFX as AudioStreamPlayer2D).play(0.25)

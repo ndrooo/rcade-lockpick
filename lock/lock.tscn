@@ -225,52 +225,18 @@ position = Vector2(53.5, 51)
 
 [node name="PinStack" parent="Pins" unique_id=424966032 instance=ExtResource("2_y8v6n")]
 position = Vector2(-32, 0)
-fall_speed = null
-shear_height = null
-scraping_hz = null
-scraping_volume = null
-audio_bus = null
-binding = null
 key_pin_height = 8
 
 [node name="PinStack2" parent="Pins" unique_id=1196165361 instance=ExtResource("2_y8v6n")]
 position = Vector2(-16, 0)
-fall_speed = null
-shear_height = null
-scraping_hz = null
-scraping_volume = null
-audio_bus = null
-binding = null
-key_pin_height = null
 
 [node name="PinStack3" parent="Pins" unique_id=1235819778 instance=ExtResource("2_y8v6n")]
-fall_speed = null
-shear_height = null
-scraping_hz = null
-scraping_volume = null
-audio_bus = null
-binding = null
-key_pin_height = null
 
 [node name="PinStack4" parent="Pins" unique_id=1576003560 instance=ExtResource("2_y8v6n")]
 position = Vector2(16, 0)
-fall_speed = null
-shear_height = null
-scraping_hz = null
-scraping_volume = null
-audio_bus = null
-binding = null
-key_pin_height = null
 
 [node name="PinStack5" parent="Pins" unique_id=2116540305 instance=ExtResource("2_y8v6n")]
 position = Vector2(32, 0)
-fall_speed = null
-shear_height = null
-scraping_hz = null
-scraping_volume = null
-audio_bus = null
-binding = null
-key_pin_height = null
 
 [node name="Pick" parent="." unique_id=1340085665 instance=ExtResource("4_rmqde")]
 position = Vector2(4, 54)
