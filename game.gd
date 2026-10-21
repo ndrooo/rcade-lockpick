@@ -57,6 +57,7 @@ func lock_picked(player: Player) -> void:
 	player.lock = new_lock
 	player.lock.picked.connect(lock_picked.bind(player))
 	player.lock.enable(player)
+	player.haptics.reconnect(player.lock)
 
 func trigger_win(player: Player) -> void:
 	stopwatch_running = false
