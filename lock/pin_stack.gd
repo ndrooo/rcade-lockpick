@@ -25,6 +25,9 @@ var scraping_audio_phase = 0.0
 var pin_set = false
 signal set_pin
 
+signal scrape_start
+signal scrape_end
+
 @export var key_pin_height = 10:
 	set(new_height):
 		key_pin_height = new_height
@@ -75,8 +78,10 @@ func toggle_scraping(is_scraping):
 	$ScrapingVFX.visible = is_scraping
 	if is_scraping:
 		scraping_sfx.play()
+		scrape_start.emit()
 	else:
 		scraping_sfx.stop()
+		scrape_end.emit()
 
 func pin_set_effect():
 	($PinSetSFX as AudioStreamPlayer2D).play(0.25)

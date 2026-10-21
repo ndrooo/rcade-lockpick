@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b0lx8uxg057qo"]
+
+[ext_resource type="Script" uid="uid://c5pwopqu42twt" path="res://gamecontroller/haptics.gd" id="1_22rsg"]
+
+[node name="Haptics" type="Node" unique_id=1695012311]
+script = ExtResource("1_22rsg")
