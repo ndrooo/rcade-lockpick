@@ -25,3 +25,7 @@ mono_crash.*.json
 .backstitch_version
 /.backstitch/
 backstitch.cfg
+
+# Exports folders
+/builds/*/*
+!/builds/*/.gdignore
